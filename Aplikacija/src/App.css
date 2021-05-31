@@ -1,0 +1,2930 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Rajdhani";
+  font-weight: 900;
+  scroll-behavior: smooth;
+}
+/*--======= NAVIGACIJA========--*/
+
+.mobile-ul {
+  height: 37px;
+  width: 37px;
+  display: none;
+  transition-duration: 3000ms;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+}
+.line1,
+.line2,
+.line3 {
+  background-color: chartreuse;
+  height: 4px;
+  width: 30px;
+  margin-top: 6px;
+  margin-left: 5px;
+}
+nav {
+  width: 100%;
+  position: fixed;
+  margin-bottom: 0px;
+  background-color: white;
+  z-index: 9999;
+  margin-top: 0;
+  border-bottom: 1px solid chartreuse;
+}
+.divBlocker {
+  position: fixed;
+  z-index: 100000;
+  height: 130%;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  opacity: 0.96;
+}
+.h3Sacekajte {
+  margin-top: 300px;
+  font-weight: bolder;
+  color: chartreuse;
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: right;
+  float: right;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.nav-box {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-top: 0px;
+  margin-left: 0px;
+  padding: 5px;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.lista {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  margin-top: 15px;
+}
+
+.menu {
+  display: inline-block;
+  flex-direction: row;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.imegun {
+  float: left;
+  margin-top: 21px;
+}
+
+.active {
+  display: block;
+  flex-direction: column;
+  color: rgb(66, 66, 66);
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
+  padding: 5px 5px;
+  transition: 0.5s;
+}
+
+.log-sign {
+  color: rgb(66, 66, 66);
+  text-align: top;
+  font-size: 20px;
+}
+.log-sign:hover {
+  color: chartreuse;
+}
+
+.logoimg {
+  width: 120px;
+  height: 30px;
+}
+
+.imgProfilSlika {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-box:hover {
+  transform: scaleY(1);
+}
+
+.active::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-top: 3px solid chartreuse;
+  border-bottom: 3px solid chartreuse;
+  transform: scaleY(1.3);
+  opacity: 0;
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+}
+
+.active::after {
+  content: "";
+  left: 0;
+  top: 2px;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  background-color: chartreuse;
+  transition: 0.3s;
+  z-index: -10;
+}
+
+.active:hover:before,
+.active:hover:after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.imgKorpa {
+  cursor: pointer;
+}
+.imgKorpa:hover {
+  opacity: 0.7;
+}
+
+.active:hover {
+  color: rgb(255, 255, 255);
+}
+
+.logo {
+  display: inline-block;
+}
+
+.gun {
+  color: chartreuse;
+  font-size: 20px;
+  margin: 20px;
+  margin-top: 100px;
+  justify-content: center;
+  padding: 20px;
+  font-weight: bolder;
+  text-decoration: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/*--======= KRaj NAVIGACIJE========--*/
+/*--======= POCETNA========--*/
+/*=========DIV ZA PUSKU NOVO========*/
+
+.containerFilteri {
+  width: 25%;
+  scrollbar-color: #7fff00 #e5e5e5;
+  isolation: isolate;
+}
+.listaSvihOruzja {
+  width: 70%;
+}
+.model,
+.kalibar,
+.proizvodjac,
+.cena {
+  word-wrap: break-word;
+  flex-wrap: wrap;
+  color: chartreuse;
+  text-align: left;
+  font-size: 20px;
+}
+
+.param_proizvodjac,
+.param_kalibar,
+.param_model {
+  font-size: 20px;
+}
+/*=========DIV ZA PUSKU NOVO KRAJ========*/
+.slikaheader {
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  float: left;
+}
+
+.tema {
+  display: inline-block;
+}
+
+.glavnikontejner {
+  width: 100%;
+  height: 700px;
+  display: inline-block;
+  isolation: isolate;
+  flex-direction: row;
+  justify-content: left;
+  /*position: relative;*/
+  background-image: url("./public/OruzarnicaPozadina.jpg");
+
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 400px 110px rgba(0, 0, 0, 0.973);
+}
+
+.tekst {
+  position: relative;
+  left: 10%;
+  right: 30%;
+  bottom: 30%;
+  margin-top: 120px;
+  float: left;
+  height: 100%;
+  padding: 0;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: row;
+  color: chartreuse;
+  text-transform: uppercase;
+  font-size: 65px;
+  animation-name: slajd;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.poruka {
+  color: white;
+  margin-top: 0;
+  font-size: 30px;
+  animation-name: slajd;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+.readmore {
+  animation-name: slajd;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+.dugmeprocitaj {
+  border: none;
+  color: white;
+  background-color: chartreuse;
+  border-radius: 5px;
+  width: 140px;
+  height: 40px;
+}
+
+.dugmeprocitaj:hover {
+  opacity: 0.8;
+}
+
+.procitaj {
+  text-decoration: none;
+  color: white;
+  font-family: "Rajdhani";
+}
+.procitaj:hover {
+  text-decoration: none;
+  color: white;
+  font-family: "Rajdhani";
+}
+
+.puska {
+  background-color: white;
+  position: relative;
+  visibility: hidden;
+  box-shadow: 4px 8px 17px 24px rgba(0, 0, 0, 0.75);
+  align-items: center;
+  text-align: center;
+
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  /*------ Animacija--------*/
+  animation-name: divpuska;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+
+  float: right;
+  display: flex;
+  flex-direction: column;
+  /*---pozicija celog diva----*/
+  right: 8%;
+  /* top: 5%; */
+  margin-top: 128px;
+  height: 100%;
+  width: 35%;
+}
+
+.topponuda {
+  /*color: chartreuse;*/
+  font-size: 25px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.parametri {
+  text-align: left;
+}
+
+.slikapuske {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  max-height: 100%;
+  max-width: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 30%;
+  /* margin-top: 5%; */
+}
+
+.opispuske {
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detaljnije {
+  display: block;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  border: 2px solid chartreuse;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  /* margin-left: 35%;*/
+
+  margin-bottom: 20px;
+}
+.detaljnije span {
+  position: relative;
+  z-index: 2;
+}
+
+.detaljnije:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: chartreuse;
+  transition: all 0.35s;
+}
+
+.detaljnije:hover {
+  color: white;
+}
+.detaljnije:hover:after {
+  width: 100%;
+}
+@keyframes divpuska {
+  0% {
+    transform: scale(0.67);
+  }
+  100% {
+    transform: scale(1);
+  }
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+.gun:hover {
+  color: rgb(120, 235, 5);
+}
+@keyframes slajd {
+  from {
+    transform: translateX(200px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+/*============KRAJ POCETNE=============*/
+/*============DARK I LIGHT TEMA========*/
+
+footer,
+.pisiteText {
+  isolation: isolate;
+}
+.darkmode-toggle {
+  z-index: 50000000;
+}
+
+.darkmode--activated .telefonKontakt,
+.darkmode--activated .mailKontakt {
+  background-color: transparent;
+  color: white;
+}
+
+.darkmode--activated .inputDostava,
+.darkmode--activated .inputNapomena {
+  background-color: transparent;
+  color: white;
+}
+.darkmode--activated .containerFilteri,
+.darkmode--activated .listaNar {
+  scrollbar-color: #7fff00 rgb(66, 66, 66);
+}
+
+.darkmode--activated .rezervacija,
+.darkmode--activated .kupi {
+  background-color: #232323;
+  border: 1px chartreuse solid;
+  color: white;
+  border-radius: 5px;
+}
+.darkmode--activated .card {
+  border: 1px solid chartreuse;
+}
+.darkmode--activated .narudzbenicaInstanca {
+  border: chartreuse 5px solid;
+}
+.darkmode--activated nav,
+.darkmode--activated .puska,
+.darkmode--activated .card,
+.darkmode--activated .naslovniKontejner,
+.darkmode--activated .btnTop,
+.darkmode--activated .redSpecifikacije,
+.darkmode--activated .deoIznajljmeno,
+.darkmode--activated .deoOmiljeno,
+.darkmode--activated .modal-content,
+.darkmode--activated .shoppingCart,
+.darkmode--activated .divBlocker {
+  background-color: #232323;
+}
+.darkmode--activated .active::after,
+.darkmode--activated .active,
+.darkmode--activated .log-sign,
+.darkmode--activated .topponuda,
+.darkmode--activated .param_proizvodjac,
+.darkmode--activated .param_kalibar,
+.darkmode--activated .param_model,
+.darkmode--activated .detaljnije,
+.darkmode--activated .card-text,
+.darkmode--activated .param_cena,
+.darkmode--activated .vremeAukc,
+.darkmode--activated .cenaAukc,
+.darkmode--activated .h1NaslovAukc,
+.darkmode--activated .opisDeo,
+.darkmode--activated .dataSpecifikacije,
+.darkmode--activated .detaljneSpec,
+.darkmode--activated .textMinCena,
+.darkmode--activated .textMaxCena,
+.darkmode--activated .lPodatak,
+.darkmode--activated .imeuNav,
+.darkmode--activated .labelSelektuj,
+.darkmode--activated .colCena,
+.darkmode--activated .colModel,
+.darkmode--activated .colProizvodjac,
+.darkmode--activated .colKolicina,
+.darkmode--activated .h5VasaKorpa,
+.darkmode--activated .titleCalendar,
+.darkmode--activated .modal-title,
+.darkmode--activated .col-12,
+.darkmode--activated .col-6,
+.darkmode--activated .labelStatePodatak,
+.darkmode--activated .FilterNaslovIkonica,
+.darkmode--activated .filterIkonica,
+.darkmode--activated .naslovFilter1,
+.darkmode--activated .naslovFilter2,
+.darkmode--activated .naslovFilteri,
+.darkmode--activated .h2ProdajeSe,
+.darkmode--activated .kontejnerSort,
+.darkmode--activated .textonama,
+.darkmode--activated .naslovKontakt,
+.darkmode--activated .pisiteText,
+.darkmode--activated .textMail,
+.darkmode--activated .pozoviteText,
+.darkmode--activated .textispodPozovi,
+.darkmode--activated .narudzbenicaInstanca,
+.darkmode--activated .proizvRezervcija,
+.darkmode--activated .modelRezervcija,
+.darkmode--activated .sacekajteDiv {
+  color: white;
+}
+.darkmode--activated .SortPusaka1,
+.darkmode--activated .SortPusaka2 {
+  color: white;
+  background-color: transparent;
+}
+.darkmode--activated option {
+  color: white;
+  background-color: #232323;
+}
+
+/* .darkmode--activated .pokrivacSlajdera{
+  background-color: rgb(66, 66, 66);
+} */
+.darkmode--activated .zapratii,
+.darkmode--activated .prava,
+.darkmode--activated .fa-facebook,
+.darkmode--activated .fa-youtube-play,
+.darkmode--activated .fa-instagram,
+.darkmode--activated .fa-google-plus,
+.darkmode--activated .inputDirektLicitacija {
+  color: #232323;
+}
+.darkmode--activated .mail,
+.darkmode--activated .brojTel,
+.darkmode--activated .naslovonama,
+.darkmode--activated .linkpocetna,
+.darkmode--activated .videosve,
+.darkmode--activated .pKodNas,
+.darkmode--activated .labelPodatak,
+.darkmode--activated .lDozvolaZa,
+.darkmode--activated .btnUrediProfil,
+.darkmode--activated .obavestenje,
+.darkmode--activated .filterProizvodjac,
+.darkmode--activated .filterKalibar,
+.darkmode--activated .dangerProfil {
+  isolation: isolate;
+}
+
+.darkmode--activated .deoProfil,
+.darkmode--activated .deoIznajljmeno,
+.darkmode--activated .deoOmiljeno {
+  box-shadow: none;
+}
+.darkmode--activated .inputIzmena {
+  background-color: transparent;
+  color: white;
+}
+/* ============slider button================
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.2s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  background: url("./public/sun.png");
+  background-size: 100% 100%;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.2s;
+  width: 26px;
+}
+
+.slider:after {
+  transition: 0.2s;
+  background-color: #fff;
+  bottom: 4px;
+  background: url("");
+  background-size: 100% 100%;
+  content: "";
+  height: 26px;
+  right: 4px;
+  position: absolute;
+  transition: 0.2s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: chartreuse;
+  transition: 0.2s;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  transition: 0.2s;
+  background-color: #fff;
+  bottom: 4px;
+  background: url("");
+  background-size: 100% 100%;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  width: 26px;
+}
+
+input:checked + .slider:after {
+  transform: translateX(26px);
+  transition: 0.2s;
+  background-color: #fff;
+  bottom: 4px;
+  background: url("./public/moon.png");
+  background-size: 100% 100%;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  width: 26px;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} */
+/*============KRAJ slider button-a================*/
+/*============KRAJ DARK I LIGHT TEME========*/
+/*============FUTER========*/
+footer {
+  display: block;
+}
+
+.prava {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 100;
+  color: white;
+}
+
+.social-network {
+  list-style: none;
+  margin-top: 0;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+.fa {
+  font-size: 25px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  color: white;
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+.fa:hover {
+  opacity: 0.8;
+}
+
+.fa-facebook:hover {
+  color: #2354bd;
+}
+
+.fa-youtube-play:hover {
+  color: red;
+}
+
+.fa-instagram:hover {
+  /*color: #2C6A93;*/
+  color: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background-clip: unset;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-google-plus:hover {
+  color: red;
+}
+
+.brojmail {
+  color: white;
+}
+
+.zapratii {
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+/*============Kraj futera========*/
+/*============Kontakt stranica========*/
+
+.overlayOnamavideo {
+  position: absolute;
+
+  padding-top: 20%;
+  padding-left: 4%;
+  font-size: 50px;
+  font-style: italic;
+  z-index: 100;
+}
+.pKodNas {
+  color: white;
+}
+.onama {
+  text-align: center;
+}
+
+.videosve {
+  overflow: hidden;
+  max-height: 650px;
+}
+
+.onamavideo {
+  margin-top: -6.5%;
+  width: 100%;
+}
+
+.scrollmouse {
+  position: absolute;
+  margin-top: -90px;
+  left: 45%;
+}
+.mouseDown {
+  width: 80px;
+  height: 80px;
+}
+.textonama {
+  align-items: left;
+  text-align: left;
+  color: rgb(66, 66, 66);
+  font-size: 20px;
+  padding-left: 120px;
+  padding-right: 120px;
+  isolation: isolate;
+}
+
+.naslovonama {
+  color: chartreuse;
+  font-size: 50px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.linkpocetna {
+  text-decoration: none;
+  color: chartreuse;
+}
+
+footer {
+  margin-top: 0;
+  background-color: chartreuse;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  margin-top: 3%;
+}
+
+.osnovnikontakt {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 400px;
+  font-size: 25px;
+  justify-content: center;
+}
+
+.telefonKontakt,
+.mailKontakt {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 500px;
+  border: 1px solid #e5e5e5;
+  margin: 20px;
+  text-align: center;
+  isolation: isolate;
+}
+.telefon,
+.mailIkonica {
+  position: relative;
+  color: chartreuse;
+  font-size: 60px;
+  padding-top: 0;
+  top: 0;
+  left: 44%;
+  margin-bottom: 24px;
+}
+.pozoviteText {
+  font-weight: 900;
+  isolation: isolate;
+}
+.textispodPozovi,
+.textMail {
+  font-weight: 400;
+  padding-left: 30px;
+  padding-right: 30px;
+  isolation: isolate;
+}
+.brojTel {
+  color: chartreuse;
+}
+.mail {
+  color: chartreuse;
+}
+.mail:hover {
+  color: chartreuse;
+  opacity: 0.7;
+}
+.naslovKontakt {
+  font-size: 60px;
+  isolation: isolate;
+  font-weight: 500;
+}
+
+.pNaslovRadno {
+  font-size: 45px;
+}
+.labelInfoRadno {
+  font-size: 40px;
+}
+.labelaDan {
+  display: inline-block;
+  width: 150px;
+  text-align: left;
+  font-size: 20px;
+}
+.labelaVreme {
+  font-size: 20px;
+}
+
+/*============KRAJ Kontatkt Stranice========*/
+
+/*============PUSKA DIV========*/
+
+.containerPusaka {
+  display: flex;
+  flex-direction: row;
+  /*align-items: center;*/
+  text-align: center;
+  padding: 50px;
+}
+.listaOruzja {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sortcol1 {
+  margin-right: 50px;
+}
+.kontejnerSort {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
+  justify-content: right;
+  padding-right: 70px;
+  isolation: isolate;
+  -webkit-padding-start: 30%;
+}
+.btnTop {
+  border: 2px solid chartreuse;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  visibility: hidden;
+  z-index: 9999999;
+}
+
+.strelicaTop {
+  color: chartreuse;
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+/*=============STARI FLEX ZA PUSKE */
+.divPuska {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 2%;
+  border: #e5e5e5 2px solid;
+  border-radius: 5px;
+  /*box-shadow: 0 0 15px 2px gray;*/
+  max-width: 70%;
+  /* min-width: 320px; */
+  margin-bottom: 10px;
+  position: relative;
+}
+/*.divPuska:hover{
+ background-color: #f4f4f4;
+}*/
+.divImgPuska {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 70%;
+  max-height: 60%;
+  flex-grow: 2;
+}
+.imgPuska {
+  display: inline-flex;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.highlightedGun {
+  border: 3px solid chartreuse;
+  border-radius: 5px;
+}
+
+.divAditionalPhotos {
+  display: flex;
+  max-width: 51%;
+  max-height: 51%;
+}
+
+.divLabelePuska {
+  display: flex;
+  flex-direction: column;
+  word-break: break-all;
+  max-width: 100%;
+  max-height: 100%;
+}
+.divDugmiciPuska {
+  display: flex;
+  margin-top: 20px;
+  flex-grow: 1;
+}
+.ModalCalendarShow {
+  margin-top: 2%;
+}
+
+/*=============STARI FLEX ZA PUSKE */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: chartreuse;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.6s ease;
+}
+
+.kupi,
+.rezervacija {
+  margin-left: 1em;
+  font-family: "Rajdhani";
+  font-size: 20px;
+  display: block;
+  position: relative;
+  width: 50%;
+  height: 50px;
+  border: none;
+  background-color: none;
+}
+
+.kupi:hover .overlay,
+.rezervacija:hover .overlay {
+  width: 100%;
+}
+
+.btnDetaljnije {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1em;
+  text-align: center;
+  border: 1px solid chartreuse;
+  padding: 0;
+  width: 100px;
+  text-decoration: none;
+  color: white;
+  transition: 0.25 ease;
+  background-color: chartreuse;
+  border-radius: 5px;
+}
+.btnDetaljnije:hover {
+  opacity: 0.8;
+  color: white;
+}
+
+.fa-shopping-cart,
+.fa-calendar {
+  color: white;
+  padding-top: 8px;
+}
+/*==========DUGME SRCE============*/
+.divImgHeart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /*position: relative;
+  top:1%;
+  left:6%;
+  right:0%;*/
+  min-width: 60px;
+  min-height: 60px;
+  cursor: pointer;
+}
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background: chartreuse;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+.divImgHeart:hover .tooltiptext {
+  visibility: visible;
+}
+.imgHeart {
+  height: 40px;
+  width: 40px;
+}
+
+.RedSpecifikacija {
+  display: flex;
+  flex-direction: row;
+}
+/*.imgHeart:hover {
+
+
+}*/
+
+/*==========KRAJ DUGME SRCE============*/
+/*============KRAJPUSKA DIV========*/
+
+/*============PRODAVNICA FILTERI========*/
+.divContainerNotLoggedInShop {
+  margin-right: 10px;
+}
+.labelNotLoggedInShop {
+  margin-top: 10px;
+  font-size: 15px;
+}
+.prviRedTipova {
+  display: flex;
+  flex-direction: row;
+}
+.naslovFilteri {
+  text-align: center;
+}
+.sortirajText {
+  margin: 0;
+  margin-right: 20px;
+  padding: 0;
+  padding-top: 5px;
+}
+.filterOn {
+  background-color: chartreuse;
+  border-radius: 5px;
+  margin: 5px;
+  height: 100%;
+  width: 95%;
+}
+.tipFilter {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/*--------Cena Filter------*/
+.filterCena {
+  position: relative;
+}
+.textMinCena,
+.textMaxCena {
+  width: 40%;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  margin: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+.dvaSlajdera {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.pokrivacSlajdera {
+  background-color: #e5e5e5;
+  border-radius: 3px;
+  height: 10px;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  top: -5px;
+}
+/*-----SLAJDER CENA--------*/
+
+.leviSlajder,
+.desniSlajder {
+  -webkit-appearance: none;
+
+  background: transparent;
+  /* position: absolute; */
+  z-index: 2;
+  outline: none !important;
+  width: 100%;
+  left: 0px;
+  height: 0px;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+.leviSlajder:focus,
+.desniSlajder:focus {
+  outline: none;
+}
+
+.leviSlajder::-moz-focus-outer,
+.desniSlajder::-moz-focus-outer {
+  border: none;
+}
+.leviSlajder ::-ms-thumb,
+.desniSlajder ::-ms-thumb {
+  width: 25px;
+  height: 25px;
+  background-color: chartreuse;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 999;
+}
+/* .leviSlajder::-ms-fill-upper,
+.desniSlajder::-ms-fill-upper,
+.leviSlajder::-ms-fill-lower,
+.desniSlajder::-ms-fill-lower
+{
+  background-color: #e5e5e5;
+} */
+
+.leviSlajder::-webkit-slider-thumb,
+.desniSlajder::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 2px;
+  width: 25px;
+  height: 25px;
+  background-color: chartreuse;
+  cursor: pointer;
+  pointer-events: all;
+  position: relative;
+}
+.leviSlajder::-moz-range-thumb,
+.desniSlajder::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: chartreuse;
+  cursor: pointer;
+  border: none;
+  pointer-events: auto;
+}
+/*----------- Kraj Filter CENA------*/
+
+.divHoverTip {
+  display: none;
+  pointer-events: none;
+  font-size: 25px;
+  color: white;
+  z-index: 200;
+  position: relative;
+  padding-left: 35%;
+  padding-top: 55%;
+  opacity: 1;
+  bottom: 0;
+  right: 0;
+  transition: opacity 0.25 ease-in-out;
+}
+
+.divHoverTip1 {
+  display: none;
+  pointer-events: none;
+  font-size: 25px;
+  color: white;
+  z-index: 200;
+  position: relative;
+}
+
+.divHoverTip2 {
+  display: none;
+  pointer-events: none;
+  /*font-size: 15px;*/
+  color: white;
+  z-index: 200;
+  position: relative;
+  bottom: 0;
+  right: 0;
+}
+.hoverTipPuske {
+  position: absolute;
+  bottom: 0%;
+  right: 5%;
+  font-size: 15px;
+}
+.tipFilter:hover .divHoverTip,
+.tipFilter:hover .divHoverTip1,
+.tipFilter:hover .divHoverTip2 {
+  display: block;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+}
+
+.filterOff {
+  background-color: "";
+  height: 100%;
+  width: 100%;
+}
+
+.FilterNaslovIkonica {
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.naslovFilter1 {
+  border-bottom: #e5e5e5 1px solid;
+}
+
+.naslovFilter2 {
+  border-bottom: #e5e5e5 1px solid;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.filterProizvodjac,
+.filterKalibar {
+  max-height: 220px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  text-align: left;
+  margin: 5px;
+  padding-left: 30%;
+  /*border: 1px solid lightgray;*/
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  cursor: pointer;
+  background: lightgray;
+  height: 20px;
+  width: 20px;
+  border: white 1px solid;
+}
+
+input[type="checkbox"]:checked {
+  background: chartreuse;
+}
+
+input[type="checkbox"]:hover {
+  filter: brightness(90%);
+}
+input[type="checkbox"]:disabled {
+  background: chartreuse;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+input[type="checkbox"]:after {
+  content: "";
+  position: relative;
+  left: 40%;
+  top: 10%;
+  width: 25%;
+  height: 60%;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: none;
+}
+
+input[type="checkbox"]:checked:after {
+  display: block;
+}
+
+input[type="checkbox"]:disabled:after {
+  border-color: #7b7b7b;
+}
+
+/*============KRAJ PRODAVNICA FILTERI========*/
+.containerStranice {
+  padding-top: 65px;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/*==============SHOPPING CART===================*/
+.shoppingCart {
+  position: fixed;
+  left: 60%;
+  top: 10%;
+  margin-top: 0.5%;
+  min-width: 550px;
+  word-break: break-all;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: solid white;
+  background-color: white;
+  border: solid 4px rgb(66, 66, 66);
+  z-index: 50;
+}
+.scrollOverflow {
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  max-height: 200px;
+}
+.btnKorpa {
+  margin-left: 5px;
+  margin-right: 2px;
+  background-color: chartreuse;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Rajdhani";
+  font-weight: 900;
+}
+.ModalKupovina {
+  margin-top: 5%;
+}
+.btnCheckout {
+  color: white;
+  background-color: chartreuse;
+  border-radius: 5px;
+  border: none;
+  font-weight: 900;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.btnCheckout:hover {
+  opacity: 0.8;
+  background-color: chartreuse;
+}
+.lbDostava {
+  display: inline-block;
+  width: 120px;
+}
+.inputNapomena {
+  width: 100%;
+  max-height: 80px;
+  min-height: 80px;
+  border: none;
+  border: 1px solid rgb(66, 66, 66);
+  border-radius: 5px;
+}
+.inputDostava {
+  width: 230px;
+  border: none;
+  border-radius: 2px;
+  border-bottom: 1px rgb(66, 66, 66) solid;
+}
+.inputDostava:hover,
+.inputDostava:focus {
+  outline: none;
+  border-bottom: #7fff00 1px solid;
+}
+.unesiteLabel {
+  color: #7fff00;
+  font-size: 20px;
+}
+.titleKupovina {
+  font-size: 30px;
+}
+.obaveznoZvezda {
+  color: #ff4000;
+}
+
+.inputNapomena:hover,
+.inputNapomena:focus {
+  border: #7fff00 1px solid;
+  outline: none;
+}
+.obavestenjeDostava {
+  font-size: 12px;
+}
+
+.greskaZaBid {
+  text-align: center;
+  padding-left: 5%;
+  margin-top: -1%;
+  color: #ff4000;
+
+  animation: animacija ease-in-out 1.5s;
+}
+
+.greskaPotvrdeKupovine,
+.greskaRezervisanja {
+  display: inline-block;
+  color: #ff4000;
+
+  text-align: center;
+
+  animation: animacija ease-in-out 1.5s;
+}
+
+/*============== kraj SHOPPING CART===================*/
+/*============== Profil kada je loginovan===================*/
+
+.vremeRezervcija {
+  color: chartreuse;
+  margin-left: 5%;
+}
+.modelRezervcija,
+.proizvRezervcija {
+  margin-left: 2%;
+}
+.RezervacijaJedna {
+  position: relative;
+  padding-top: 1%;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: solid 2px #e5e5e5;
+  border-radius: 5px;
+}
+.btnObrisiRez {
+  float: right;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff4000;
+  color: white;
+}
+.noviRedRez {
+  display: none;
+}
+.dangerProfil {
+  margin-top: 10px;
+  font-size: 17px;
+}
+.divPoruka {
+  text-align: center;
+  background-color: #eae9e9;
+}
+.containerProfil {
+  background: #eae9e9;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+
+  padding-bottom: 50px;
+}
+.infoProfila {
+  text-align: center;
+}
+.divslikaProfila {
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  position: relative;
+}
+#profilnaSlika {
+  max-width: 115px;
+  max-height: 115px;
+}
+.overlayChangePic {
+  background: chartreuse;
+  width: 200px;
+  height: 200px;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  display: none;
+  cursor: pointer;
+  z-index: 99999999;
+}
+.kamera {
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+.textChange {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pPromeniteSliku {
+  width: 120px;
+  font-size: 18px;
+  font-weight: bolder;
+
+  margin: 0;
+}
+.divslikaProfila:hover .overlayChangePic {
+  display: block;
+  color: white;
+  opacity: 0.9;
+}
+/*
+.slikaProfila:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+
+  transition: all 0.3s ease;
+  text-decoration: none;
+} */
+.slikaProfila {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.okoAukc,
+.okoAukc2,
+.okoAukc3 {
+  position: absolute;
+  color: chartreuse;
+  left: 75%;
+  margin-top: -2px;
+}
+
+.deoProfil {
+  width: 50%;
+  margin-right: 1%;
+  margin-top: 2%;
+  margin-left: 5%;
+  background-color: white;
+  text-align: left;
+
+  border-radius: 5px;
+  box-shadow: 0 0 15px 2px gray;
+}
+.deoPregled {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  margin-right: 1%;
+  margin-top: 2%;
+  margin-left: 3%;
+  text-align: left;
+  border-radius: 5px;
+}
+.obavestenje {
+  color: red;
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.deoOmiljeno {
+  box-shadow: 0 0 15px 2px gray;
+  background-color: white;
+  height: 360px;
+  /* overflow-y: scroll; */
+  position: relative;
+
+  text-align: center;
+  border-radius: 5px;
+}
+.omiljenaPuska {
+  border: solid 3px #e5e5e5;
+  margin: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.deoIznajljmeno {
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 2px gray;
+  background-color: white;
+  height: 360px;
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+.calendarIznajmljeno {
+  margin-top: 50px;
+}
+.informacijeProfila {
+  color: rgb(66, 66, 66);
+  font-size: 22px;
+  text-align: left;
+  margin-right: 1%;
+  margin-top: 5%;
+  margin-left: 5%;
+  padding-left: 2%;
+  padding-top: 2%;
+}
+.listaOmiljenih,
+.listaRezervacija {
+  overflow-y: scroll;
+  height: 320px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.pomiljenePuske,
+.pIznamljeno {
+  width: 100%;
+  height: 40px;
+  border-bottom: chartreuse 1px solid;
+  position: absolute;
+
+  font-size: 25px;
+  color: chartreuse;
+  margin: 0;
+  padding: 0;
+}
+.btnUrediProfil {
+  border: none;
+  color: white;
+  background-color: chartreuse;
+  border-radius: 5px;
+  width: 140px;
+  height: 40px;
+}
+
+.btnUrediProfil:hover {
+  opacity: 1.2;
+}
+
+.uredi {
+  text-decoration: none;
+  color: white;
+  font-family: "Rajdhani";
+}
+.uredi:hover {
+  color: white;
+  opacity: 1.2;
+}
+.pDozvole {
+  font-size: 18px;
+}
+.lDozvolaZa {
+  color: chartreuse;
+  text-align: center;
+  margin-left: 20px;
+  font-size: 30px;
+}
+.labelPodatak {
+  color: chartreuse;
+  margin-right: 10px;
+  isolation: isolate;
+}
+.labelStatePodatak {
+  isolation: isolate;
+}
+
+/*=========TEST==============*/
+
+/*==============KRAJ Profil kada je loginovan===================*/
+/*===========Detaljne tehnicke specigfikacije===========*/
+.tabelaSpecifikacije {
+  width: 100%;
+}
+.redSpecifikacije {
+  background-color: whitesmoke;
+}
+.dataSpecifikacije {
+  font-size: 20px;
+}
+.opisDeo {
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 20px;
+}
+.detaljneSpec {
+  font-size: 40px;
+  border-top: chartreuse 5px solid;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.techSpec {
+  border-bottom: chartreuse 5px solid;
+  border-radius: 10px;
+}
+
+/*===========Kraj Detaljne tehnicke specigfikacije===========*/
+/*===========UREDJIVANJE svih Style tagova iz Fajlova===========*/
+
+.h2ProdajeSe {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  isolation: isolate;
+}
+.filterIkonica {
+  color: black;
+}
+.infoIkonica {
+  pointer-events: none;
+  width: 30%;
+  height: 100%;
+  background-color: #7fff00;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.labelaSpecifikacija {
+  color: #7fff00;
+}
+/*==========MODALI NA PROFILU========*/
+.ModalPromenaLozinke {
+  margin-top: 10%;
+}
+
+.ModalProfilnaSlika {
+  margin-top: 10%;
+}
+.titleProfilna,
+.titleSifra {
+  color: chartreuse;
+  font-weight: 900;
+}
+.bodyProfilna {
+  display: flex;
+  flex-direction: row;
+}
+
+.highlightedPicture {
+  border: 3px solid chartreuse;
+  border-radius: 5px;
+}
+
+/*==========KRAJ MODALI NA PROFILU========*/
+/*===========KRAJ UREDJIVANJE svih Style tagova iz Fajlova===========*/
+
+/*Aukcija*/
+.ulogujteDivAukc {
+  text-align: center;
+}
+.ModalLicitacija {
+  margin-top: 2%;
+}
+
+.dangerAukc {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.redStanjePuske {
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 4px;
+  margin-top: 5px;
+}
+.trenutniBider {
+  font-size: 19px;
+  color: chartreuse;
+}
+.divBiderVreme {
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+}
+.redCenaBida {
+  display: flex;
+  flex-direction: row;
+}
+.kontejnerAukcija {
+  display: flex;
+  flex-direction: column;
+}
+.naslovniKontejner {
+  background-image: url("./public/aukcija.png");
+  background-size: cover;
+  background-position: 100% 100%;
+  min-height: 250px;
+  background-color: white;
+}
+.imgAukcije {
+  width: 100%;
+}
+
+.h1NaslovAukc {
+  color: black;
+  font-weight: bolder;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  padding-right: 0;
+  font-size: 40px;
+}
+.listaAukcijskih {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.aukcijskoOruzje {
+  margin-top: 25px;
+  margin-left: 20px;
+
+  border: 2px solid #e5e5e5;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.kontejnerPuske {
+  display: flex;
+  flex-direction: row;
+}
+.gornjiKontejner {
+  display: flex;
+  flex-direction: row;
+}
+.mojaPonuda {
+  display: flex;
+  flex-direction: row;
+}
+.pmojaPonuda {
+  margin: 3px;
+}
+.inputPonuda {
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid chartreuse;
+  margin-left: 20px;
+}
+.dugmiciLicitacija {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+}
+.btnPotvrdaLicitacije {
+  width: 30%;
+  margin-left: 20px;
+  border: none;
+  background-color: chartreuse;
+  color: white;
+  border-radius: 5px;
+}
+.btnLicitiraj1 {
+  border-radius: 5px;
+  border: none;
+  background-color: chartreuse;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 30%;
+  height: 40px;
+}
+.opisAukcijskog {
+  width: 50%;
+  margin-left: 40px;
+}
+.btnLicitiraj {
+  border-radius: 5px;
+  border: none;
+  background-color: chartreuse;
+  color: white;
+}
+
+.slikaAukc {
+  width: 100%;
+}
+.pAukcOpis {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.btnDetaljnije1 {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+  margin-top: 15px;
+  text-align: center;
+  border: 1px solid chartreuse;
+  padding: 0;
+  width: 100px;
+  text-decoration: none;
+  color: white;
+  transition: 0.25 ease;
+  background-color: chartreuse;
+  border-radius: 5px;
+}
+.btnDetaljnije1:hover {
+  opacity: 0.8;
+  color: white;
+}
+
+.h2imeAukcjskog {
+  color: chartreuse;
+}
+.labelaOpisAukc {
+  color: chartreuse;
+}
+.vremeAukc {
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+.cenaAukc {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
+.labelaCenaAukc,
+.labelaVremeAukc {
+  color: chartreuse;
+}
+
+.btnDetaljnijeAukc {
+  display: flex;
+  flex-direction: row;
+
+  text-align: center;
+  border: 1px solid chartreuse;
+  padding: 0;
+  width: 100px;
+  text-decoration: none;
+  color: white;
+  transition: 0.25 ease;
+  background-color: chartreuse;
+  border-radius: 5px;
+}
+
+.btnDetaljnijeAukc:hover {
+  opacity: 0.8;
+  color: white;
+}
+
+.najvecaSlikaAukcije {
+  display: flex;
+  flex-direction: column;
+  max-height: 90%;
+  max-width: 90%;
+}
+
+.divAditionalPhotosAuction {
+  display: flex;
+  flex-direction: row;
+  max-width: 90%;
+}
+
+.slide-container {
+  width: 70%;
+  height: 500px;
+  margin: auto;
+}
+
+.each-slide > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 300px;
+  width: 380px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.each-slide span {
+  margin-bottom: 270px;
+  text-align: center;
+}
+.preostaloText {
+  font-weight: 100;
+  font-size: 22px;
+  display: inline-block;
+  width: 200px;
+}
+.preostaloVreme {
+  font-size: 22px;
+}
+.preostaloVreme,
+.seldecaMinimalnaLicitacija,
+.lokacijaLabel {
+  color: chartreuse;
+}
+.btnPodigniCenu {
+  background-color: chartreuse;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-left: 5px;
+}
+.btnPodigniCenu:hover {
+  opacity: 0.8;
+}
+
+.labelDin {
+  color: chartreuse;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  border-radius: 5px;
+}
+.btnPotvrdaDirekt,
+.btnAutoLicitacija {
+  background-color: chartreuse;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  height: 25px;
+  width: 160px;
+}
+.btnPotvrdaDirekt:hover {
+  opacity: 0.8;
+}
+.inputDirektLicitacija,
+.inputAutoLicitacija {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.inputDirektLicitacija:focus,
+.inputDirektLicitacija:hover .inputAutoLicitacija:hover,
+.inputAutoLicitacija:focus {
+  border: 1px solid chartreuse;
+}
+.labelCenaPDV {
+  color: #7fff00;
+}
+.kartica {
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+}
+.kartica2 {
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+}
+.infoPDV {
+  color: #00529b;
+  margin-top: -5px;
+}
+.ikonicaPDV {
+  color: #00529b;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+.trenutnaLicitacija {
+  color: chartreuse;
+  font-size: 25px;
+}
+.h5Trenutna {
+  margin-top: 8px;
+}
+
+/*KRAJ Aukcija*/
+/*==============Stranica Izmeni Profi ==============*/
+.kontejnerIzmeni {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.izmenaPodaci {
+  display: flex;
+  flex-direction: column;
+}
+.btnSacuvaj {
+  background: chartreuse;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  height: 40px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.divSacuvajbtn {
+  text-align: center;
+}
+
+.lPodatak {
+  display: inline-block;
+  width: 150px;
+}
+.divPodatak {
+  margin-bottom: 15px;
+}
+.pdozvolaZa {
+  display: inline-block;
+  margin: 10px 0px 10px 0px;
+  color: #7fff00;
+  text-align: center;
+  font-size: 20px;
+}
+
+.greska {
+  text-align: center;
+  padding-left: 15%;
+  margin-top: -10px;
+  color: #ff4000;
+
+  animation: animacija ease-in-out 1.5s;
+}
+
+@keyframes animacija {
+  from {
+    transform: translateY(-12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.close {
+  color: #ff4000;
+  font-size: 40px;
+  opacity: 1;
+}
+.close:hover {
+  color: #ff4000;
+  font-size: 40px;
+  opacity: 0.7;
+}
+
+.inputIzmena {
+  border: none;
+  border-bottom: 1px rgb(66, 66, 66) solid;
+
+  appearance: none;
+  opacity: 0.8;
+  width: 250px;
+}
+
+.inputIzmena:focus,
+.inputIzmena:hover {
+  outline: none;
+  border-bottom: 1px chartreuse solid;
+}
+
+.XIzadji {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.izadji {
+  color: #e5e5e5;
+  font-size: 50px;
+
+  right: 0;
+}
+.izadji:hover {
+  color: #ff4000;
+}
+.tooltipIzadji {
+  visibility: hidden;
+  width: 70px;
+
+  color: #ff4000;
+  text-align: center;
+  border: none;
+  position: absolute;
+  z-index: 2;
+  top: 11px;
+  right: 80%;
+  font-size: 25px;
+}
+.XIzadji:hover .tooltipIzadji {
+  visibility: visible;
+}
+.btnOtkaziEdit {
+  background-color: #ff4000;
+  border: none;
+}
+.btnPotvrdiEdit {
+  border: none;
+  background: chartreuse;
+}
+
+.btnOtkaziEdit:hover {
+  background-color: #ff4000;
+  border: none;
+  opacity: 0.8;
+}
+.btnPotvrdiEdit:hover {
+  border: none;
+  background: chartreuse;
+  opacity: 0.8;
+}
+
+.urediText {
+  color: chartreuse;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+.ModalEditProfile {
+  margin-top: 4%;
+}
+
+.PromeniSifru {
+  background-color: chartreuse;
+  border: none;
+  color: white;
+  align-content: left;
+}
+.PromeniSifru:hover {
+  opacity: 0.8;
+  background-color: chartreuse;
+}
+
+.PromeniSifru:focus,
+.btnPotvrdiEdit:focus {
+  background-color: chartreuse;
+}
+/*==============KRAJ Stranica Izmeni Profi ==============*/
+
+/*==============NARUDZBENICA ==============*/
+/* izdvojena puska*/
+.narudzbenicaInstanca {
+  border: 5px solid #232323;
+  border-radius: 13px;
+  isolation: isolate;
+  font-size: 20px;
+}
+.highlightText {
+  color: #ff4000;
+}
+.narudzbenicaInstance {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  border-top: 2px #232323 solid;
+  border-bottom: 2px #232323 solid;
+  text-align: center;
+  max-width: 100%;
+}
+.colPuska {
+  text-align: center;
+}
+.card {
+  margin-bottom: 50px;
+}
+.btnZabrani,
+.btnOdobri {
+  background-color: chartreuse;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  margin-right: 20px;
+  height: 40px;
+  width: 200px;
+}
+.btnZabrani {
+  background-color: #ff4000;
+}
+.labelaUkupno {
+  font-size: 30px;
+}
+.labelZaJednu {
+  font-size: 25px;
+}
+.labelUkupnoZaJednu {
+  color: chartreuse;
+}
+.labelUkupnoBaza {
+  color: #7fff00;
+}
+.colKontrolniTasteri {
+  margin-bottom: 10px;
+}
+.OtkaziNar {
+  color: #ff4000;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+}
+.naslovNar {
+  text-align: center;
+  font-size: 50px;
+  color: chartreuse;
+}
+.sredinaNar {
+  overflow-y: scroll;
+  height: 400px;
+  border-bottom: 3px solid chartreuse;
+  border-top: 3px solid chartreuse;
+  border-radius: 5px;
+}
+.infoKoloneNar {
+  font-size: 30px;
+  color: chartreuse;
+  text-align: center;
+}
+.detaljiNar {
+  color: chartreuse;
+  font-weight: 900;
+  font-size: 20px;
+}
+/*==============KRAJ NARUZBENICA ==============*/
+.sredinaRez {
+  height: 120x;
+}
+.sredinaBorder {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 2px solid #e5e5e5;
+}
+.gornjiDeoRez {
+  text-align: center;
+}
+.imeRez,
+.prezimeRez {
+  font-size: 25px;
+  color: chartreuse;
+}
+/*==============RESPONSIVNOST ==============*/
+@media only screen and (max-width: 1400px) {
+  .kontejnerSort {
+    -webkit-padding-start: 20%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .kontejnerSort {
+    -webkit-padding-start: 10%;
+  }
+}
+
+@media only screen and (max-width: 1330px) {
+  .labelPodatak,
+  .labelStatePodatak {
+    font-size: 15px;
+  }
+  .btnUrediProfil {
+    font-size: 15px;
+    width: 150px;
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .puska {
+    margin-top: 97px;
+  }
+
+  .kontejnerSort {
+    -webkit-padding-start: 2%;
+  }
+  .imgPuska0,
+  .imgPuska1,
+  .imgPuska2,
+  .arrowLeft,
+  .arrowRight {
+    max-width: 6vw;
+    max-height: 4vh;
+  }
+  .puska {
+    right: 10px;
+  }
+  .welcome {
+    font-size: 40px;
+  }
+  .poruka {
+    font-size: 20px;
+  }
+  .topponuda {
+    font-size: 15px;
+  }
+  .proizvodjac,
+  .param_proizvodjac,
+  .param_kalibar,
+  .param_model,
+  .kalibar,
+  .model {
+    font-size: 15px;
+  }
+  .dugmeprocitaj {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .detaljnije {
+    width: 120px;
+    height: 20px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+.noviRedCena {
+  display: none;
+}
+@media only screen and (max-width: 1340px) {
+  .noviRedCena {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 856px) {
+  .sortirajText,
+  .SortPusaka1 {
+    font-size: 10px;
+  }
+  .sortirajText {
+    line-height: 25px;
+  }
+  .labelNotLoggedInShop {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 1088px) {
+  .sortirajText,
+  .SortPusaka1 {
+    font-size: 20px;
+  }
+  .sortirajText {
+    line-height: 40px;
+  }
+
+  .kupi {
+    font-size: 12px;
+    width: 100px;
+    height: 40px;
+  }
+  .rezervacija {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+  }
+  .textMail,
+  .textispodPozovi {
+    font-size: 20px;
+  }
+}
+
+.imgPuska0,
+.imgPuska1,
+.imgPuska2,
+.arrowLeft,
+.arrowRight {
+  max-width: 8vw;
+  max-height: 6vh;
+}
+@-moz-document url-prefix() {
+  .imgPuska0,
+  .imgPuska1,
+  .imgPuska2,
+  .arrowLeft,
+  .arrowRight {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+@supports (-ms-ime-align: auto) {
+  .pokrivacSlajdera {
+    z-index: 109;
+  }
+  .desniSlajder,
+  .leviSlajder {
+    height: 100%;
+    width: 50%;
+    pointer-events: all;
+    z-index: 110;
+    margin-top: -10px;
+  }
+
+  .imgPuska0,
+  .imgPuska1,
+  .imgPuska2,
+  .arrowLeft,
+  .arrowRight {
+    max-height: 70%;
+    max-width: 6vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .btnOdobri,
+  .btnZabrani {
+    width: 150px;
+    margin-left: 1px;
+    font-size: 15px;
+  }
+  .detaljnije {
+    width: 100px;
+    font-size: 10px;
+  }
+  .puska {
+    width: 250px;
+    left: 0;
+    float: left;
+    margin-top: 50px;
+    margin-left: 30px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .mouseDown {
+    width: 50px;
+    height: 50px;
+  }
+
+  .naslovonama,
+  .pNaslovRadno {
+    font-size: 40px;
+  }
+
+  .mailIkonica,
+  .telefon {
+    margin-left: -7px;
+    font-size: 40px;
+    text-align: center;
+  }
+  .textonama,
+  .mail,
+  .textMail,
+  .textispodPozovi,
+  .brojTel,
+  .labelaDan,
+  .labelaVreme {
+    font-size: 15px;
+  }
+  .pKodNas {
+    font-size: 20px;
+  }
+  .tipFilter:hover .divHoverTip,
+  .tipFilter:hover .divHoverTip1,
+  .tipFilter:hover .divHoverTip2 {
+    display: none;
+  }
+  .FilterNaslovIkonica,
+  .filterIkonica,
+  .naslovFilter2,
+  .textMinCena,
+  .textMaxCena {
+    font-size: 13px;
+  }
+  .naslovFilter1,
+  .labelSelektuj {
+    font-size: 13px;
+  }
+  .divPuska {
+    width: 500px;
+  }
+  .kupi,
+  .rezervacija {
+    width: 70px;
+    font-size: 7px;
+  }
+  .btnDetaljnije {
+    font-size: 14px;
+    width: 80px;
+    height: 25px;
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .SortPusaka1,
+  .sortirajText,
+  .labelNotLoggedInShop {
+    font-size: 10px;
+  }
+  .labelaCenaAukc,
+  .labelaVremeAukc {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .shoppingCart {
+    width: 500px;
+    position: fixed;
+    right: 10px;
+    top: 70px;
+    left: 40%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .Carousel {
+    width: 100%;
+  }
+  .btnPodigniCenu {
+    width: 60px;
+    font-size: 9px;
+  }
+  .btnPotvrdaDirekt {
+    font-size: 10px;
+    width: 80px;
+  }
+  .inputDirektLicitacija {
+    font-size: 10px;
+    width: 200px;
+    padding: 0;
+    padding-left: 5px;
+  }
+  .shoppingCart {
+    width: 500px;
+    position: fixed;
+    right: 10px;
+    top: 70px;
+    left: 30%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .shoppingCart {
+    width: 500px;
+    position: fixed;
+    right: 10px;
+    top: 70px;
+    left: 30%;
+  }
+}
+@media only screen and (max-width: 792px) {
+  .shoppingCart {
+    width: 500px;
+    position: fixed;
+    right: 10px;
+    top: 70px;
+    left: 10%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .shoppingCart {
+    width: 500px;
+    position: fixed;
+    right: 10px;
+    top: 70px;
+    left: 2%;
+  }
+}
+@media only screen and (max-width: 710px) {
+  nav {
+    height: 65px;
+  }
+  .lista {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-box {
+    margin-top: 10%;
+  }
+  .navigation {
+    border: 2px chartreuse solid;
+    position: absolute;
+    z-index: 1;
+    height: 600px;
+    right: 0px;
+    top: 65px;
+    background-color: white;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 40%;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+    opacity: 0;
+  }
+
+  .darkmode--activated .navigation {
+    color: white;
+    background-color: #232323;
+  }
+
+  .mobile-ul {
+    display: block;
+    cursor: pointer;
+  }
+}
+.navigation-active {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+  transition: 500ms;
+  background-color: #ff4000;
+}
+
+.toggle .line2 {
+  opacity: 0;
+  transition: 0ms;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-8.5px, -8px);
+  transition: 500ms;
+  background-color: #ff4000;
+}
+.line1 {
+  transition-duration: 1000ms;
+}
+.line2 {
+  transition-duration: 1500ms;
+}
+.line3 {
+  transition-duration: 2000ms;
+}
+@media only screen and (max-width: 910px) {
+  .imgKorpa {
+    width: 20px;
+    height: 20px;
+  }
+  .imgProfilSlika {
+    width: 30px;
+    height: 30px;
+  }
+  .imeuNav {
+    font-size: 12px;
+  }
+  nav {
+    height: 65px;
+  }
+
+  .active,
+  .log-sign,
+  .fa-sign-out,
+  .fa-sign-in,
+  .fa-user {
+    font-size: 13px;
+  }
+  .lista {
+    margin: 0;
+    margin-top: 20px;
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .imgPuska0,
+  .imgPuska1,
+  .imgPuska2,
+  .arrowLeft,
+  .arrowRight {
+    max-width: 7vw;
+    max-height: 5vh;
+  }
+}
+@media only screen and (max-width: 1096px) {
+  .omiljenaPuska {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .h1NaslovAukc {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 926px) {
+  .h1NaslovAukc {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 756px) {
+  .pomiljenePuske,
+  .pIznamljeno {
+    font-size: 18px;
+  }
+  .imgHeart {
+    right: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+  }
+
+  .divImgHeart {
+    min-width: 25px;
+    min-height: 25px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .kupi,
+  .rezervacija {
+    width: 50px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .kupi,
+  .rezervacija {
+    width: 40px;
+    height: 15px;
+    font-size: 5px;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .h1NaslovAukc {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 684px) {
+  .dangerAukc {
+    font-size: 15px;
+  }
+  .h1NaslovAukc {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 684px) {
+  .dangerProfil {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .dangerAukc {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 524px) {
+  .h1NaslovAukc {
+    font-size: 20px;
+    color: #ff4000;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .overlayChangePic,
+  .slikaProfila {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 820px) {
+  .btnObrisiRez {
+    float: none;
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
+  .noviRedRez {
+    display: block;
+    float: none;
+  }
+}

@@ -1,0 +1,359 @@
+/*===========LOGIN PAGE ===========*/
+
+.arkriss {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.containerLogin {
+  width: 98vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+
+  /*grid-template-columns: repeat(2,1fr);*/
+}
+.pomTekst {
+  color: chartreuse;
+}
+.imgLogin {
+  position: relative;
+  background-image: url("./public/shooter.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-position: center;
+  width: 50%;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.formLogin {
+  width: 360px;
+}
+
+.avatar {
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+.formLogin .h2Login {
+  font-size: 2.9rem;
+  text-transform: uppercase;
+  margin: 15px 0;
+  color: #7fff00;
+}
+
+.input-div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 7% 93%;
+  margin: 25px 0;
+
+  padding: 5px 0;
+  border-bottom: 2px solid #d9d9d9;
+}
+.input-div:after,
+.input-div:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #7fff00;
+  transition: 0.3s;
+}
+
+.input-div:after {
+  right: 50%;
+}
+
+.input-div:before {
+  left: 50%;
+}
+
+.input-div.focus .divI .lock,
+.input-div.focus .divI .user {
+  color: chartreuse;
+}
+
+.input-div.focus div h5 {
+  top: -3px;
+  font-size: 15px;
+}
+.input-div.focus div h4 {
+  top: -5px;
+  font-size: 15px;
+}
+.input-div.focus:after,
+.input-div.focus:before {
+  width: 50%;
+}
+
+.input-div.one {
+  margin-bottom: 40px;
+  margin-top: 15px;
+}
+
+.lock,
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divI .lock,
+.divI .user {
+  color: #d9d9d9;
+  transition: 0.3s;
+}
+.divI {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divI .lock,
+.divI .user {
+  color: #d9d9d9;
+  transition: 0.3s;
+}
+
+.input-div > div {
+  position: relative;
+  height: 45px;
+}
+
+.input-div > div h5 {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(66, 66, 66);
+
+  transition: 0.3s;
+}
+.input-div > div h4 {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(66, 66, 66);
+  font-size: 18px;
+
+  transition: 0.3s;
+}
+
+.inputLogin {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.5rem 0.7rem;
+  font-size: 1.2rem;
+  /* font-family: 'Poppins', sans-serif; */
+  color: rgb(66, 66, 66);
+}
+.divForgotPass {
+  text-align: right;
+}
+
+.forgotPass {
+  text-decoration: none;
+  color: #7fff00;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.forgotPass:hover {
+  color: #6fd21a;
+}
+.modal-ResetPassword {
+  padding-top: 100px;
+}
+
+.imgPreloader {
+  height: 100px;
+  width: 100px;
+}
+.btnLogin {
+  display: block;
+  width: 100%;
+  height: 50%;
+  border-radius: 5px;
+  margin: 1rem 0;
+
+  outline: none;
+  border: none;
+  background-color: chartreuse;
+  /* background-image: linear-gradient(to right,#7fff00,#32be8f,#7fff00); */
+  cursor: pointer;
+  color: #ffff;
+  text-transform: uppercase;
+  font-size: 25px;
+  background-size: 200%;
+  transition: 0.3;
+}
+
+.btnLogin:hover {
+  background-position: right;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1050px) {
+  .containerLogin {
+    row-gap: 5rem;
+    column-gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .formLogin {
+    width: 290px;
+  }
+
+  .formLogin .h2Login {
+    font-size: 2.4rem;
+    margin: 1px 0;
+  }
+
+  .imgLogin img {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .imgLogin {
+    display: none;
+  }
+  .containerLogin {
+    grid-template-columns: 1fr;
+  }
+
+  .btnLogin {
+    height: 50%;
+  }
+  .arkriss {
+    display: none;
+  }
+  .login-container {
+    justify-content: center;
+  }
+}
+
+.textprekoSlike {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+.pWelcome {
+  font-size: 60px;
+}
+.pTextIspod {
+  font-weight: 400;
+  font-size: 20px;
+}
+.pPrijavise {
+  margin-bottom: 30px;
+  font-size: 50px;
+  color: chartreuse;
+  font-weight: 300;
+}
+.nemateText {
+  font-weight: 300;
+  color: rgb(66, 66, 66);
+}
+.napraviNalog {
+  color: chartreuse;
+  font-weight: 900;
+}
+.napraviNalog:hover {
+  color: chartreuse;
+  opacity: 0.7;
+}
+
+.greskaLogin {
+  text-align: left;
+  padding-left: 10px;
+  color: #ff4000;
+  margin-top: -30px;
+  line-height: 10px;
+  animation: animacija ease-in-out 1.5s;
+}
+
+@keyframes animacija {
+  from {
+    transform: translateY(-12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.inputZaboravljena {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
+.inputZaboravljena:hover,
+.inputZaboravljena:focus {
+  outline: none;
+  background: transparent;
+  border-bottom: #7fff00 1px solid;
+}
+.urediTextBody {
+  margin: 2% 2% 2% 2%;
+}
+
+.greskaZaboravljenaLozinka {
+  text-align: center;
+  padding-right: 25%;
+  color: #ff4000;
+  animation: animacija ease-in-out 1.5s;
+}
+/*---DARK THEME ----*/
+.darkmode--activated .pPrijavise,
+.darkmode--activated .btnLogin,
+.darkmode--activated .forgotPass,
+.darkmode--activated .napraviNalog,
+.darkmode--activated .greskaLogin {
+  mix-blend-mode: difference;
+}
+.darkmode--activated .btnLogin,
+.darkmode--activated .inputLogin,
+.darkmode--activated .input-div > div h5 {
+  color: white;
+}
+
+/*===========KRAJ LOGIN PAGE ===========*/
+
+/*RESPONSIVE*/
+@media only screen and (max-width: 902px) {
+  .login-container {
+    margin-left: 25%;
+  }
+}
+.okoLog {
+  color: chartreuse;
+  position: absolute;
+  left: 80%;
+  top: 5px;
+}

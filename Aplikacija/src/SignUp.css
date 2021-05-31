@@ -1,0 +1,273 @@
+.containerSignUp {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: #e5e5e5;
+ isolation: isolate;
+}
+.leviDiv {
+  background-image: url("./public/shooter3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  background-color: chartreuse;
+  position: relative;
+
+}
+.manjiContainerSignUp {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+  box-shadow: 0 0 15px 7px rgba(0, 0, 0, 0.75);
+}
+.desniDiv {
+  display: flex;
+  width: 50%;
+  text-align: center;
+  justify-content: center;
+  background: white;
+}
+.unosPodataka {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background: white;
+  right: 0;
+  width: 360px;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+}
+
+.btnSign {
+  width: 70%;
+  height: 50%;
+  border-radius: 5px;
+  margin: 1rem 0;
+  outline: none;
+  border: none;
+  background-color: chartreuse;
+  cursor: pointer;
+  color: #ffff;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.btnSign:hover {
+  opacity: 0.8;
+}
+.input {
+  width: 50%;
+  border: none;
+  border-bottom: chartreuse 1px solid;
+}
+.h1Reg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bolder;
+  font-size: 50px;
+}
+.pImateNalog {
+  font-weight: 300;
+  color: rgb(66, 66, 66);
+}
+.linkPrijaviSe {
+  color: chartreuse;
+  font-weight: 900;
+}
+.linkPrijaviSe:hover {
+  color: chartreuse;
+  opacity: 0.7;
+}
+
+/*------iz Logina prekopirano-------*/
+
+.input-div1 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 7% 93%;
+  margin: 25px 0;
+  padding: 5px 0;
+  border-bottom: 2px solid #d9d9d9;
+}
+.input-div1:after,
+.input-div1:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #7fff00;
+  transition: 0.3s;
+}
+
+.input-div1:after {
+  right: 50%;
+}
+
+.input-div1:before {
+  left: 50%;
+}
+
+/* .input-div1.focus .divI .lock,
+.input-div1.focus .divI .user {
+  color: chartreuse;
+} */
+
+.input-div1.focus div h5 {
+  top: -3px;
+  font-size: 15px;
+}
+.input-div1.focus div h4 {
+  top: -5px;
+  font-size: 15px;
+}
+.input-div1.focus:after,
+.input-div1.focus:before {
+  width: 50%;
+}
+
+.input-div1.one {
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.input-div1 > div {
+  position: relative;
+  height: 45px;
+}
+
+.input-div1 > div h5 {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(66, 66, 66);
+
+  transition: 0.3s;
+}
+
+.inputSignUp {
+  position: absolute;
+  width: 360px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.5rem 0.7rem;
+  font-size: 1.2rem;
+  /* font-family: 'Poppins', sans-serif; */
+  color: rgb(66, 66, 66);
+}
+.h5Ponovite {
+  position: absolute;
+  margin-left: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(66, 66, 66);
+  width: 120px;
+}
+.oko,
+.oko2 {
+  color: chartreuse;
+  position: absolute;
+  left: 290px;
+  top: 5px;
+}
+
+.greskaSignUp {
+  text-align: left;
+  padding-left: 10px;
+  color: #ff4000;
+  animation: Animacija ease-in-out 1.5s;
+}
+
+@keyframes Animacija {
+  from {
+    transform: translateY(-5px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/*Brise gore dole strelice za input type=number*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/*DARK THEME*/
+.darkmode--activated .containerSignUp{
+background-color: #1f1c1c;
+}
+.darkmode--activated .unosPodataka,.darkmode--activated .desniDiv{
+  background-color: #232323;
+
+}
+.darkmode--activated .manjiContainerSignUp{
+  box-shadow: none;
+}
+.darkmode--activated .inputSignUp
+,.darkmode--activated .input-div1 >div h5
+,.darkmode--activated .pImateNalog
+{
+  color: white;
+}
+
+
+
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 1088px){
+  .oko,.oko2{
+    left: 1200%;
+  }
+  .leviDiv{
+    display: none;
+  }
+  .desniDiv{
+   
+    margin-left: 25%;
+    width:400px;
+  }
+}
+@media only screen and (max-width:640px) {
+  .desniDiv{
+    margin-left: 4%;
+    width: 350px;
+   
+  }
+ 
+}
+
+@media only screen and (max-width:460px) {
+  .desniDiv{
+    margin-left: -30px;
+    width: 350px;
+  }
+ 
+}
